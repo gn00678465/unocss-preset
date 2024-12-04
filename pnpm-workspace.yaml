@@ -1,0 +1,5 @@
+packages:
+  - packages/*
+catalog:
+  tsup: ^8.3.5
+  unocss: ^0.65.0
