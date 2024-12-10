@@ -2,6 +2,7 @@
   "name": "@uno-preset/preset-dark-mode-theme",
   "version": "1.0.0",
   "description": "",
+  "homepage": ".",
   "main": "./dist/index.js",
   "scripts": {
     "dev": "tsup --watch",
@@ -27,6 +28,10 @@
     "dist"
   ],
   "devDependencies": {
+    "@unocss/rule-utils": "catalog:",
     "unocss": "catalog:"
+  },
+  "dependencies": {
+    "colord": "catalog:"
   }
 }
