@@ -24,7 +24,7 @@ export function preflights(
         return [
           lightRoots.map(root => `${root}{${lightCss}}`).join(''),
           darkRoots.map(root => `${root}{${darkCss}}`).join('')
-        ].join(';')
+        ].join('\n')
       },
     }
   ]

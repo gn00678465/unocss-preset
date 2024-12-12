@@ -12,7 +12,8 @@ describe('preset-dark-mode-theme', () => {
     const { css: noPreflightCSS } = await uno.generate('text-primary')
     expect(noPreflightCSS).toMatchInlineSnapshot(`
       "/* layer: theme */
-      :root{--un-colors-primary:rgb(255 255 255);};:root.dark{--un-colors-primary:rgb(255 255 255);}"
+      :root{--un-colors-primary:rgb(255 255 255);}
+      :root.dark{--un-colors-primary:rgb(255 255 255);}"
       `)
   })
 
@@ -25,7 +26,8 @@ describe('preset-dark-mode-theme', () => {
     const { css: noPreflightCSS } = await uno.generate('text-primary')
     expect(noPreflightCSS).toMatchInlineSnapshot(`
       "/* layer: theme */
-      @media (prefers-color-scheme: light){--un-colors-primary:rgb(255 255 255);};@media (prefers-color-scheme: dark){--un-colors-primary:rgb(255 255 255);}"
+      @media (prefers-color-scheme: light){--un-colors-primary:rgb(255 255 255);}
+      @media (prefers-color-scheme: dark){--un-colors-primary:rgb(255 255 255);}"
       `)
   })
 })
