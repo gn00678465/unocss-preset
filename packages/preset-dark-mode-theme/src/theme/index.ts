@@ -12,7 +12,7 @@ export function generateTheme(options: PresetBuildVariableOptions) {
 
   function handler(base: Record<string, string>) {
     return Object.fromEntries(
-      Object.entries(base).map(([k, v]) => [k, colorToString(convertToRGB(v) || v)])
+      Object.entries(base).map(([k, v]) => [k, convertToRGB(v)?.components.join(' ')]).filter(([, v]) => !!v)
     )
   }
   
