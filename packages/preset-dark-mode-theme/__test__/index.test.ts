@@ -1,4 +1,4 @@
-import { createGenerator, presetUno } from 'unocss'
+import { createGenerator } from 'unocss'
 import { describe, expect, it } from 'vitest'
 import { presetDarkModeTheme } from '../src'
 
@@ -6,7 +6,7 @@ describe('preset-dark-mode-theme', () => {
   it('basic', async () => {
     const uno = await createGenerator({
       presets: [
-        presetDarkModeTheme({ theme: { colors: { primary: '#fff' } }, preflights: true })
+        presetDarkModeTheme({ theme: { colors: { primary: '#fff' } } })
       ],
     })
     const { css: noPreflightCSS } = await uno.generate('text-primary')
@@ -19,7 +19,7 @@ describe('preset-dark-mode-theme', () => {
   it('media dark mode', async () => {
     const uno = await createGenerator({
       presets: [
-        presetDarkModeTheme({ theme: { colors: { primary: '#fff' } }, preflights: true, selector: 'media' })
+        presetDarkModeTheme({ theme: { colors: { primary: '#fff' } }, selector: 'media' })
       ],
     })
     const { css: noPreflightCSS } = await uno.generate('text-primary')
